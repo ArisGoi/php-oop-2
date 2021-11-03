@@ -9,10 +9,10 @@ class Product {
     protected $discount;
 
     /**
-     * @param str $_name nome del prodotto
-     * @param str $_description descrizione del prodotto
-     * @param num_int $_stars min=1 max=5
-     * @param num $_price (0.00) not < 0.1
+     * @param string $_name nome del prodotto
+     * @param string $_description descrizione del prodotto
+     * @param integer $_stars min=1 max=5
+     * @param number $_price (0.00) not < 0.1
      */
     function __construct($_name, $_description, $_stars, $_price)
     {

@@ -8,9 +8,10 @@ class User {
     private $discount;
 
     /**
-     * @param str $_name nome dell'utente
-     * @param str $_surname cognome dell'utente
-     * @param num_int $_eta età dell'utente
+     * @param string $_name nome dell'utente
+     * @param string $_surname cognome dell'utente
+     * @param integer $_eta età dell'utente
+     * @param bool $_premium Opzionale, imposta true se utente = premium
      */
     function __construct($_name, $_surname, $_eta, $_premium = false)
     {
