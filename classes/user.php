@@ -16,12 +16,14 @@ class User {
     function __construct($_name, $_surname, $_eta, $_premium = false)
     {
         $this->name = $_name;
-        $this->description = $_surname;
-        $this->stars = $_eta;
+        $this->surname = $_surname;
+        $this->eta = $_eta;
         $this->premium = $_premium;
 
         if($this->premium == true){
             $this->user_discount = 0.35;
+        } else {
+            $this->user_discount = 0;
         }
     }
 

@@ -1,6 +1,7 @@
 <?php
 require_once __DIR__ . "/classes/product.php";
 require_once __DIR__ . "/classes/user.php";
+// require_once __DIR__ . "/classes/employee.php"
 
 // Oggi pomeriggio provate ad immaginare quali sono le classi necessarie per creare uno shop online; ad esempio, ci saranno sicuramente dei prodotti da acquistare e degli utenti che fanno shopping.
 
@@ -19,7 +20,8 @@ $birra_ghiande = new Product("Birra di Ghiande Autunnale", "una birra leggera ch
 $birra_ferroscuro = new Product("Birra dei Ferroscuro", "la famosa birra dei Ferroscuro.", 4, 2.32);
 
 // UTENTE
-$nowUser = new User("Magnaras", "Oltrevuoto", 34, true);
+$nowUser = new User("Magnaras", "Oltrevuoto", 35, true);
+var_dump($nowUser);die;
 
 ?>
 
