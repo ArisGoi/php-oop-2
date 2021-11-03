@@ -29,5 +29,4 @@ class User {
     function getEta(){
         return $this->eta;
     }
-
 }
