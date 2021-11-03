@@ -5,7 +5,7 @@ class User {
     private $surname;
     private $eta;
     private $premium;
-    private $discount;
+    public $user_discount;
 
     /**
      * @param string $_name nome dell'utente
@@ -19,6 +19,10 @@ class User {
         $this->description = $_surname;
         $this->stars = $_eta;
         $this->premium = $_premium;
+
+        if($this->premium == true){
+            $this->user_discount = 0.35;
+        }
     }
 
     function getName(){

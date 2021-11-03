@@ -1,12 +1,10 @@
 <?php
-// require_once __DIR__ . "/user.php"
-
-class Product {
+require_once __DIR__ . "/user.php";
+class Product{
     private $name;
     private $description;
     private $stars;
     private $price;
-    protected $discount;
 
     /**
      * @param string $_name nome del prodotto
@@ -32,8 +30,8 @@ class Product {
     function getStars(){
         return $this->stars;
     }
-    function getPrice(){
-        $finalPrice = $this->price - ($this->price * $this->discount);
+    function getPrice($discount){
+        $finalPrice = $this->price - ($this->price * $discount);
         return number_format($finalPrice, 2, '.', ',');
     }
 

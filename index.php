@@ -45,13 +45,13 @@ $nowUser = new User("Magnaras", "Oltrevuoto", 34, true);
         <h3><?= $birra_ghiande->getName() ?></h3>
         <p><?= $birra_ghiande->getDescription() ?></p>
         <p><?= "valutazione: " . $birra_ghiande->getStars() ?></p>
-        <p><?= "Prezzo: " . $birra_ghiande->getPrice() ?></p>
+        <p><?= "Prezzo: " . $birra_ghiande->getPrice($nowUser->user_discount) ?></p>
     </div>
     <div>
         <h3><?= $birra_ferroscuro->getName() ?></h3>
         <p><?= $birra_ferroscuro->getDescription() ?></p>
         <p><?= "valutazione: " . $birra_ferroscuro->getStars() ?></p>
-        <p><?= "Prezzo: " . $birra_ferroscuro->getPrice() ?></p>
+        <p><?= "Prezzo: " . $birra_ferroscuro->getPrice($nowUser->user_discount) ?></p>
     </div>
 </body>
 </html>
