@@ -1,5 +1,6 @@
 <?php
 require_once __DIR__ . "/classes/product.php";
+require_once __DIR__ . "/classes/user.php";
 
 // Oggi pomeriggio provate ad immaginare quali sono le classi necessarie per creare uno shop online; ad esempio, ci saranno sicuramente dei prodotti da acquistare e degli utenti che fanno shopping.
 
@@ -15,8 +16,10 @@ require_once __DIR__ . "/classes/product.php";
 // PRODOTTI
 $birra_ghiande = new Product("Birra di Ghiande Autunnale", "una birra leggera che fa bene a te e alla natura.", 3, 1.23);
 
+$birra_ferroscuro = new Product("Birra dei Ferroscuro", "la famosa birra dei Ferroscuro.", 4, 2.32);
+
 // UTENTE
-// $nowUser = new User ();
+$nowUser = new User("Magnaras", "Oltrevuoto", 34, true);
 
 ?>
 
@@ -29,7 +32,7 @@ $birra_ghiande = new Product("Birra di Ghiande Autunnale", "una birra leggera ch
     <title>Festa della Birra</title>
     <style>
         div{
-            background-color: gray;
+            background-color: #bbb;
             margin: 15px;
             padding: 10px 15px;
         }
@@ -43,6 +46,12 @@ $birra_ghiande = new Product("Birra di Ghiande Autunnale", "una birra leggera ch
         <p><?= $birra_ghiande->getDescription() ?></p>
         <p><?= "valutazione: " . $birra_ghiande->getStars() ?></p>
         <p><?= "Prezzo: " . $birra_ghiande->getPrice() ?></p>
+    </div>
+    <div>
+        <h3><?= $birra_ferroscuro->getName() ?></h3>
+        <p><?= $birra_ferroscuro->getDescription() ?></p>
+        <p><?= "valutazione: " . $birra_ferroscuro->getStars() ?></p>
+        <p><?= "Prezzo: " . $birra_ferroscuro->getPrice() ?></p>
     </div>
 </body>
 </html>
