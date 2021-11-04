@@ -6,6 +6,7 @@ class User {
     private $eta;
     private $premium;
     public $user_discount;
+    private $c_cards = [];
 
     /**
      * @param string $_name nome dell'utente
@@ -35,5 +36,14 @@ class User {
     }
     function getEta(){
         return $this->eta;
+    }
+    function setCard($code, $exp, $cvv){
+        array_push($this->c_cards,
+        [
+            "code" => $code,
+            "exp" => $exp,
+            "cvv" => $cvv
+        ]
+        );
     }
 }

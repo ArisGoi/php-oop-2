@@ -22,6 +22,8 @@ $birra_ferroscuro = new Product("Birra dei Ferroscuro", "la famosa birra dei Fer
 // UTENTE
 $nowUser = new Employee("Magnaras", "Oltrevuoto", 35, true);
 
+// CREDIT CARDS
+$nowUser->setCard(123, 00, 10);
 ?>
 
 <!DOCTYPE html>
